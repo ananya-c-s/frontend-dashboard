@@ -97,10 +97,10 @@ const SidebarComponent = () => {
                 fontWeight="bold"
                 sx={{ mt: "10px" }}
               >
-                Ed Roh
+                Anna S.
               </Typography>
               <Typography variant="h5" color={colors.greenAccent[500]}>
-                VP Fancy Admin
+                Sr Software Engineer
               </Typography>
             </Box>
           )}
