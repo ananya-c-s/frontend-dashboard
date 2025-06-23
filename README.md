@@ -2,7 +2,7 @@
 
 This is the frontend for the Healthcare Booking App — a responsive web application for booking healthcare appointments. It interacts with a Kafka-based backend system to facilitate real-time appointment processing. The frontend is built using **React** and **Material UI**.
 
----
+## Deployed URL: https://frontend-dashboard-silk.vercel.app/
 
 ## 🛠 Tech Stack
 
