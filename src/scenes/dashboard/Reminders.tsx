@@ -1,4 +1,13 @@
-import { Card, CardContent, Typography, Box } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  Typography,
+  Box,
+  List,
+  ListItem,
+  ListItemText,
+  Divider,
+} from "@mui/material";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 
 import { useTheme } from "@mui/material/styles";
@@ -7,6 +16,12 @@ import { tokens } from "../../theme";
 const Reminders = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
+  const reminders = [
+    { id: 1, text: "Doctor appointment", time: "10:00 AM" },
+    { id: 2, text: "Team meeting", time: "2:00 PM" },
+    { id: 3, text: "Submit project report", time: "5:00 PM" },
+  ];
 
   return (
     <Card
@@ -29,11 +44,11 @@ const Reminders = () => {
         <Box display="flex" alignItems="center" gap={1} mb={2}>
           <NotificationsActiveIcon
             sx={{
-              fontSize: 24,
+              fontSize: 28,
               backgroundColor: colors.redAccent[500],
               color: "#fff",
               borderRadius: "50%",
-              padding: "5px",
+              padding: "6px",
             }}
           />
           <Typography
@@ -44,6 +59,48 @@ const Reminders = () => {
             Reminders
           </Typography>
         </Box>
+
+        {/* Reminders List */}
+        <List>
+          {reminders.map((reminder, index) => (
+            <Box key={reminder.id}>
+              <ListItem
+                disablePadding
+                sx={{
+                  py: 1,
+                  px: 1.5,
+                  borderRadius: 2,
+                  cursor: "default",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  "&:hover": {
+                    backgroundColor:
+                      theme.palette.mode === "dark"
+                        ? colors.primary[500]
+                        : colors.grey[100],
+                  },
+                }}
+              >
+                <Typography
+                  variant="body1"
+                  color={theme.palette.text.primary}
+                  fontWeight={600}
+                >
+                  {reminder.text}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  color={theme.palette.text.secondary}
+                  sx={{ minWidth: 70, textAlign: "right" }}
+                >
+                  {reminder.time}
+                </Typography>
+              </ListItem>
+              {index < reminders.length - 1 && <Divider component="li" />}
+            </Box>
+          ))}
+        </List>
       </CardContent>
     </Card>
   );
