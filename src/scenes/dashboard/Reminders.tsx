@@ -5,7 +5,6 @@ import {
   Box,
   List,
   ListItem,
-  ListItemText,
   Divider,
 } from "@mui/material";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
