@@ -1,13 +1,11 @@
 //import { useState } from "react";
 
-import Topbar from "./scenes/global/Topbar";
-import Sidebar from "./scenes/global/SidebarComponent";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 
-//import { Routes, Route } from "react-router-dom";
-// import Dashboard from "./scenes/dashboard";
-// import Team from "./scenes/team";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./scenes/dashboard/HomePage";
+import Layout from "./scenes/global/Layout";
 // import Invoices from "./scenes/invoices";
 // import Contacts from "./scenes/contacts";
 // import Bar from "./scenes/bar";
@@ -25,21 +23,13 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Topbar />
-        {/* <Routes>
-           <Route path="/" element={<Dashboard />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/invoices" element={<Invoices />} />
-          <Route path="/form" element={<Form />} />
-          <Route path="/bar" element={<Bar />} />
-          <Route path="/pie" element={<Pie />} />
-          <Route path="/line" element={<Line />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/geography" element={<Geography />} />
-          <Route path="/calendar" element={<Calendar />} /> 
-        </Routes>  */}
-        <Sidebar />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="dashboard" element={<HomePage />} />
+            {/* other nested routes */}
+          </Route>
+          {/* Other routes without sidebar/topbar can go here */}
+        </Routes>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
