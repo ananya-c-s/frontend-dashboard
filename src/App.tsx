@@ -1,20 +1,9 @@
-//import { useState } from "react";
-
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom"; // ⬅️ Add Navigate
 import HomePage from "./scenes/dashboard/HomePage";
 import Layout from "./scenes/global/Layout";
-// import Invoices from "./scenes/invoices";
-// import Contacts from "./scenes/contacts";
-// import Bar from "./scenes/bar";
-// import Form from "./scenes/form";
-// import Line from "./scenes/line";
-// import Pie from "./scenes/pie";
-// import FAQ from "./scenes/faq";
-// import Geography from "./scenes/geography";
-// import Calendar from "./scenes/calendar/calendar";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -24,11 +13,14 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Routes>
+          {/* Redirect root path to /dashboard */}
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+
+          {/* Main layout and nested routes */}
           <Route path="/" element={<Layout />}>
             <Route path="dashboard" element={<HomePage />} />
-            {/* other nested routes */}
+            {/* Add other nested routes here */}
           </Route>
-          {/* Other routes without sidebar/topbar can go here */}
         </Routes>
       </ThemeProvider>
     </ColorModeContext.Provider>
