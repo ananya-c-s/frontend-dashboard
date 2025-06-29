@@ -10,7 +10,8 @@ import {
   ListItemAvatar,
   ListItemText,
 } from "@mui/material";
-import { tokens } from "../../theme";
+import { tokens } from "../../../theme";
+
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { useTheme, type Theme } from "@mui/material/styles";
 import { Link } from "react-router-dom";

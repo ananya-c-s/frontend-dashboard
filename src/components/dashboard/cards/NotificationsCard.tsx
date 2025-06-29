@@ -14,7 +14,7 @@ import PriorityHighIcon from "@mui/icons-material/PriorityHigh";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import { useTheme, type Theme } from "@mui/material/styles";
-import { tokens } from "../../theme";
+import { tokens } from "../../../theme";
 import { Link } from "react-router-dom";
 
 const notifications = [

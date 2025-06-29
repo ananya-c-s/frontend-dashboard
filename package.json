@@ -18,12 +18,15 @@
     "@mui/material": "^7.1.2",
     "@nivo/bar": "^0.99.0",
     "@nivo/pie": "^0.99.0",
+    "@react-login-page/page10": "^1.0.5",
     "formik": "^2.4.6",
     "react": "^19.1.0",
     "react-countup": "^6.5.3",
     "react-dom": "^19.1.0",
+    "react-login-page": "^1.0.5",
     "react-pro-sidebar": "^1.1.0",
     "react-router-dom": "^6.30.1",
+    "typewriter-effect": "^2.22.0",
     "yup": "^1.6.1"
   },
   "devDependencies": {

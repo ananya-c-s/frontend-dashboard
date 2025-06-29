@@ -7,6 +7,7 @@ const Layout = () => {
   return (
     <Box display="flex" height="100vh" width="100vw">
       <Sidebar role="admin" />
+
       <Box flexGrow={1} display="flex" flexDirection="column">
         <Topbar />
         <Box flexGrow={1} p={2} overflow="auto">

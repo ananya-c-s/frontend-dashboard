@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { ResponsivePie } from "@nivo/pie";
-import { tokens } from "../../theme";
+import { tokens } from "../../../theme";
 
 const data = [
   { id: "Confirmed", label: "Confirmed", value: 20, color: "#4caf50" }, // green

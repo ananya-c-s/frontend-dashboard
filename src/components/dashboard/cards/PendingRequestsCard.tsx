@@ -14,7 +14,7 @@ import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import CancelIcon from "@mui/icons-material/Cancel";
 import { useTheme } from "@mui/material/styles";
-import { tokens } from "../../theme";
+import { tokens } from "../../../theme";
 
 const appointmentRequests = [
   {

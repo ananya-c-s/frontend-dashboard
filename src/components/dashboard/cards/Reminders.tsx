@@ -10,7 +10,7 @@ import {
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 
 import { useTheme } from "@mui/material/styles";
-import { tokens } from "../../theme";
+import { tokens } from "../../../theme";
 
 const Reminders = () => {
   const theme = useTheme();

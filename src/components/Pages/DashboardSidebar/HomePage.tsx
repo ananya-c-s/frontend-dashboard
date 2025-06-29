@@ -1,16 +1,12 @@
 import { Grid, Box } from "@mui/material";
 
-import CardAppointments from "../dashboard/CardTodaysAppointments";
-import CardNotifications from "../dashboard/CardNotifications";
-//import QuickStatsCardSimple from "../dashboard/CardNotifications";
-import LabReports from "../dashboard/LabReports";
-// import Reminders from "../dashboard/Reminders";
-
-//import UpcomingAppointments from "../dashboard/UpcomingAppointments";
-// import CardQuickLinks from "../dashboard/CardQuickLinks"
-import QuickStatsCard from "../dashboard/QuickStatsCard";
-import PendingRequests from "../dashboard/PendingRequests";
-import Reminders from "./Reminders";
+// Update the import path to match the actual filename, e.g. CardTodaysAppointments.tsx or CardAppointments.tsx
+import CardAppointments from "../../dashboard/cards/TodaysAppointmentsCard";
+import CardNotifications from "../../dashboard/cards/NotificationsCard";
+import LabReports from "../../dashboard/cards/LabReportsCard";
+import QuickStatsCard from "../../dashboard/cards/QuickStatsCard";
+import PendingRequests from "../../dashboard/cards/PendingRequestsCard";
+import Reminders from "../../dashboard/cards/Reminders";
 
 const HomePage = () => {
   return (

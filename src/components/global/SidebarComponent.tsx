@@ -6,17 +6,17 @@ import { tokens } from "../../theme";
 import User from "../../assets/user.png";
 
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import EventAvailableIcon from "@mui/icons-material/EventAvailable";
+import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LogoutIcon from "@mui/icons-material/Logout";
-import EventNoteIcon from "@mui/icons-material/EventNote";
+import TodayIcon from "@mui/icons-material/Today";
 import QueueIcon from "@mui/icons-material/Queue";
-import PeopleOutlineIcon from "@mui/icons-material/PeopleOutline";
-import SendIcon from "@mui/icons-material/Send";
-import SettingsInputComponentIcon from "@mui/icons-material/SettingsInputComponent";
+// import PeopleOutlineIcon from "@mui/icons-material/PeopleOutline";
+// import SendIcon from "@mui/icons-material/Send";
+// import SettingsInputComponentIcon from "@mui/icons-material/SettingsInputComponent";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
 interface ItemProps {
@@ -44,14 +44,14 @@ const Item = ({ title, to, icon, selected, setSelected }: ItemProps) => {
 const patientMenu = [
   { label: "Home", icon: <HomeOutlinedIcon />, route: "/dashboard" },
   {
-    label: "Book Appointment",
-    icon: <EventAvailableIcon />,
-    route: "/appointments/book",
+    label: "Accept Appointment Requests",
+    icon: <AssignmentTurnedInIcon />,
+    route: "/appointments/requests",
   },
   {
     label: "My Appointments",
     icon: <CalendarMonthIcon />,
-    route: "/appointments",
+    route: "/appointments/today",
   },
   {
     label: "Waitlist Status",
@@ -68,29 +68,35 @@ const patientMenu = [
 ];
 
 const adminMenu = [
-  { label: "Home", icon: <HomeOutlinedIcon />, route: "/dashboard" },
+  { label: "Home", icon: <HomeOutlinedIcon />, route: "/admin/dashboard" },
+  {
+    label: "Appointment Requests",
+    icon: <AssignmentTurnedInIcon />,
+    route: "/admin/appointments",
+  },
   {
     label: "Today's Appointments",
-    icon: <EventNoteIcon />,
+    icon: <TodayIcon />,
     route: "/admin/appointments/today",
   },
+
   { label: "Manage Waitlist", icon: <QueueIcon />, route: "/admin/waitlist" },
-  {
-    label: "Patient Records",
-    icon: <PeopleOutlineIcon />,
-    route: "/admin/patients",
-  },
-  {
-    label: "Send Notification",
-    icon: <SendIcon />,
-    route: "/admin/notifications",
-  },
-  {
-    label: "System Status",
-    icon: <SettingsInputComponentIcon />,
-    route: "/admin/system",
-  },
-  { label: "Logout", icon: <LogoutIcon />, route: "/logout" },
+  // {
+  //   label: "Patient Records",
+  //   icon: <PeopleOutlineIcon />,
+  //   route: "/admin/patients",
+  // },
+  // {
+  //   label: "Send Notification",
+  //   icon: <SendIcon />,
+  //   route: "/admin/notifications",
+  // },
+  // {
+  //   label: "System Status",
+  //   icon: <SettingsInputComponentIcon />,
+  //   route: "/admin/system",
+  // },
+  { label: "Logout", icon: <LogoutIcon />, route: "/admin/logout" },
 ];
 
 const SidebarComponent = ({

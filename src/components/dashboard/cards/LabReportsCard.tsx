@@ -16,7 +16,7 @@ import ScienceIcon from "@mui/icons-material/Science";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import ReportProblemOutlinedIcon from "@mui/icons-material/ReportProblemOutlined";
 import { useTheme, type Theme } from "@mui/material/styles";
-import { tokens } from "../../theme";
+import { tokens } from "../../../theme";
 
 interface LabReport {
   patientName: string;
