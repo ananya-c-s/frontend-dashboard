@@ -14,9 +14,7 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LogoutIcon from "@mui/icons-material/Logout";
 import TodayIcon from "@mui/icons-material/Today";
 import QueueIcon from "@mui/icons-material/Queue";
-// import PeopleOutlineIcon from "@mui/icons-material/PeopleOutline";
-// import SendIcon from "@mui/icons-material/Send";
-// import SettingsInputComponentIcon from "@mui/icons-material/SettingsInputComponent";
+
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
 interface ItemProps {
